@@ -1,22 +1,13 @@
 <?php
-
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Propietario extends Model
-{
-    use HasFactory;
+class Propietario extends Model {
+    protected $table = 'propietarios';
+    public $timestamps = false;
+    protected $fillable = ['email', 'movil'];
 
-    protected $fillable = [
-        'nom',
-        'email',
-        'movil'
-    ];
-
-    public function mascotas()
-    {
-        return $this->hasMany(Mascota::class);
+    public function mascotas() {
+        return $this->hasMany(Mascota::class, 'propietario_id');
     }
 }

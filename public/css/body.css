@@ -1,0 +1,64 @@
+:root {
+    --primary-clinical: #007bff;
+    --secondary-clinical: #6c757d;
+    --background-light: #f8f9fa;
+    --text-dark: #343a40;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#page {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+legend {
+    color: var(--primary-clinical);
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary-clinical);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.table thead {
+    background-color: var(--primary-clinical);
+    color: white;
+}
+
+#info, #error {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+#info {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+#error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+#info:empty, #error:empty {
+    display: none;
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="date"], textarea {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
